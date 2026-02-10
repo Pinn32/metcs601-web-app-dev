@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    /*padding: 0;  /* don't do this, otherwise it will affect list items */
+    box-sizing: border-box;  
+}
+
+
+#page-wrapper {
+    width: 80vw;
+    background-color: darkseagreen;
+    margin: 0 auto;  /* top & bottom 0, left & right auto */
+}
+
+#nav-main {
+    display: flex;
+    justify-content: space-between;
+    height: 150vh;  /* at least 100% of the viewport */
+    width: 100%;  /* don't exist 100% */
+}
+
+#portrait {
+    max-width: 40%;
+    padding: 4%;
+}
+
+
+.intro {
+    /*display: flex;*/
+    text-align: center;
+}
+
+main {
+    /*height: 150vh;  /* at least 100% of the viewport */
+    background-color: beige;
+    /*text-align: center; */
+    width: 70%;
+}
+
+
+
+nav {
+    /*width: 30%;*/
+}
