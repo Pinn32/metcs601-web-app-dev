@@ -31,8 +31,10 @@
 
 main {
     /*height: 150vh;  /* at least 100% of the viewport */
-    background-color: beige;
     /*text-align: center; */
+    height: 150vh;
+    font-family: Helvetica, sans-serif;
+    background-color: beige;
     width: 70%;
 }
 
