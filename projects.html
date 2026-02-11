@@ -3,6 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <title>Projects | Resume</title>
+
+        <!-- google web font -->
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+        </style>
+
+        <script src="calculator.js" defer></script>
+
+        <!-- external css -->
         <link rel="stylesheet" type="text/css" href="style.css">
         <!-- involve type attr as convention (?) -->
     </head>
@@ -28,38 +37,76 @@
                 </nav>
 
                 <main>
-                    <div class="intro">  <!-- .intro: centered page intro section -->
+                    <section class="intro">  <!-- .intro: centered page intro section -->
                         <h1>Projects</h1>
                         <p>Current projects and previous projects archive.</p>
-                    </div>  <!-- .intro: centered page intro section -->
+                    </section>  <!-- .intro: centered page intro section -->
 
-                    <div class="main-content"> <!-- .main-content: left-aligned main content section -->
+                    <section class="main-content"> <!-- .main-content: left-aligned main content section -->
 
-                        <h2>Data Visualization Projects</h2>
-                        <p>Below are two data visualization projects I worked on during my undergraduate studies. Three documents are involved in each project:</p>
-                        <ul>
-                            <li>An HTML format of the data visualization report with interactive plots.</li>
-                            <li>A CSV file of the data used in the visualization.</li>
-                            <li>A PDF format of the report.</li>
-                        </ul>
+                        <!-- start: js calculator section -->
+                        <section class="calculator-section"> <!-- .calculator-section -->
+                            <h2 class="calculator-title">Javascript Calculator</h2>
 
-                        <h3>Catalan Referendum Tweet Sentiment Analysis Using Multiple Lexicons</h3>
-                        <p>This project involved analyzing Twitter data to understand public sentiment towards climate change over a six-month period. Using Python libraries such as Pandas, Matplotlib, and Seaborn, I cleaned the dataset, performed sentiment analysis, and created interactive visualizations to illustrate trends and patterns in the data.</p>
-                        <ul>
-                            <li><a href="https://canvas.liverpool.ac.uk/eportfolios/1808/entries/10700/files/HE47Qb4Jp5jV6gam9rZk7jU6a2gbUnRR5cRojg4r" target="_blank" rel="noopener noreferrer">HTML Report</a></li>
-                            <li><a href="https://canvas.liverpool.ac.uk/eportfolios/1808/entries/10700/files/yh9sGJm7IS5dibkufdRtCILlaDQDm0gNY2imlgtJ" target="_blank" rel="noopener noreferrer">Data CSV</a></li>
-                            <li><a href="https://canvas.liverpool.ac.uk/eportfolios/1808/entries/10700/files/xqhBWtxEXvnjzWJFProEiyfajhmTxox5NDWUYf6j" target="_blank" rel="noopener noreferrer">PDF Report</a></li>
-                        </ul>
+                            <div class="calculator-container"> <!-- .calculator-container -->
 
-                        <h3>Global Visa Cost Explorer: Visualizing International Visa Fees</h3>
-                        <p>This project uses the Global Visa Cost Dataset from the Migration Policy Centre, European University Institute. It reports visa fees between country pairs for seven categories in 2019, collected mainly from government sites. Three interactive visualizations are included: a Sankey diagram, a bar chart, and a choropleth map.</p>
-                        <ul>
-                            <li><a href="https://canvas.liverpool.ac.uk/eportfolios/1808/entries/10700/files/4R0an8i5t9Dlqh92NzEhYQ06T1B6IaAnrx5gUEZv" target="_blank" rel="noopener noreferrer">HTML Report</a></li>
-                            <li><a href="https://canvas.liverpool.ac.uk/eportfolios/1808/entries/10700/files/Hc50obwf9bED9ObqH5FLsBlzb7y2GMyaJXfXCr5j" target="_blank" rel="noopener noreferrer">Data CSV</a></li>
-                            <li><a href="https://canvas.liverpool.ac.uk/eportfolios/1808/entries/10700/files/UBPVaZ3oAQkRflW4sYnzK5FIwOur45roDJD2Yu3X" target="_blank" rel="noopener noreferrer">PDF Report</a></li>
-                        </ul>
+                                <!-- inputs -->
+                                <div class="input-group">
+                                    <label for="first-number">Enter the first number: </label>
+                                    <input type="text" id="first-number" placeholder="First number">
+                                    <label for="second-number">Enter the second number: </label>
+                                    <input type="text" id="second-number" placeholder="Second number">
+                                </div>
 
-                    </div> <!-- .main-content: left-aligned main content section -->
+                                <!-- buttons -->
+                                <div class="button-group">
+                                    <button onclick="additionCalc()">+</button>
+                                    <button onclick="subtractionCalc()">-</button>
+                                    <button onclick="multiplicationCalc()">*</button>
+                                    <button onclick="divisionCalc()">/</button>
+                                    <button onclick="powerCalc()">**</button>
+                                    <button onclick="clearCalc()">Clear</button>
+                                </div>
+
+                                <!-- output -->
+                                <div class="output-group">
+                                    <h3 id="output"></h3>
+                                </div>
+
+                            </div> <!-- .calculator-container -->
+                        </section> <!-- .calculator-section -->
+                        <!-- end: js calculator section -->
+
+                        <!-- start: dv projects section -->
+                        <section>
+                            <h2>Data Visualization Projects</h2>
+                            <p>Below are two data visualization projects I worked on during my undergraduate studies. Three documents are involved in each project:</p>
+                            <ul>
+                                <li>An HTML format of the data visualization report with interactive plots.</li>
+                                <li>A CSV file of the data used in the visualization.</li>
+                                <li>A PDF format of the report.</li>
+                            </ul>
+
+                            <h3>Catalan Referendum Tweet Sentiment Analysis Using Multiple Lexicons</h3>
+                            <p>This project involved analyzing Twitter data to understand public sentiment towards climate change over a six-month period. Using Python libraries such as Pandas, Matplotlib, and Seaborn, I cleaned the dataset, performed sentiment analysis, and created interactive visualizations to illustrate trends and patterns in the data.</p>
+                            <ul>
+                                <li><a href="https://canvas.liverpool.ac.uk/eportfolios/1808/entries/10700/files/HE47Qb4Jp5jV6gam9rZk7jU6a2gbUnRR5cRojg4r" target="_blank" rel="noopener noreferrer">HTML Report</a></li>
+                                <li><a href="https://canvas.liverpool.ac.uk/eportfolios/1808/entries/10700/files/yh9sGJm7IS5dibkufdRtCILlaDQDm0gNY2imlgtJ" target="_blank" rel="noopener noreferrer">Data CSV</a></li>
+                                <li><a href="https://canvas.liverpool.ac.uk/eportfolios/1808/entries/10700/files/xqhBWtxEXvnjzWJFProEiyfajhmTxox5NDWUYf6j" target="_blank" rel="noopener noreferrer">PDF Report</a></li>
+                            </ul>
+
+                            <h3>Global Visa Cost Explorer: Visualizing International Visa Fees</h3>
+                            <p>This project uses the Global Visa Cost Dataset from the Migration Policy Center, European University Institute. It reports visa fees between country pairs for seven categories in 2019, collected mainly from government sites. Three interactive visualizations are included: a Sankey diagram, a bar chart, and a choropleth map.</p>
+                            <ul>
+                                <li><a href="https://canvas.liverpool.ac.uk/eportfolios/1808/entries/10700/files/4R0an8i5t9Dlqh92NzEhYQ06T1B6IaAnrx5gUEZv" target="_blank" rel="noopener noreferrer">HTML Report</a></li>
+                                <li><a href="https://canvas.liverpool.ac.uk/eportfolios/1808/entries/10700/files/Hc50obwf9bED9ObqH5FLsBlzb7y2GMyaJXfXCr5j" target="_blank" rel="noopener noreferrer">Data CSV</a></li>
+                                <li><a href="https://canvas.liverpool.ac.uk/eportfolios/1808/entries/10700/files/UBPVaZ3oAQkRflW4sYnzK5FIwOur45roDJD2Yu3X" target="_blank" rel="noopener noreferrer">PDF Report</a></li>
+                            </ul>
+                        </section>
+                        <!-- end: dv projects section -->
+
+
+                    </section> <!-- .main-content: left-aligned main content section -->
                 </main>
             </div> <!-- #nav-main: wrapping nav and main sections -->
 
