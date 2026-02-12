@@ -37,35 +37,37 @@ footer {
 nav {
     flex: 1;
     max-width: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    padding: 2%;
+    text-align: center;
+    padding: 3%;
     background-color: darkseagreen;
 }
 
 nav ul {
     list-style: none;  /* remove dots before list items */
-    padding: 5%;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    gap: calc(2px + 1vw);
+    justify-content: center;
+    gap: calc(2px + 2vw);
 }
 
 nav li {
-    padding: 5%;
-    text-align: center;
-    border: calc(1px + 0.2vw) solid darkgreen;
-    border-radius: calc(2px + 0.5vw);
-    background-color: seagreen;
+    padding: 0;
+    margin: 0;
 }
 
 nav a {
-    text-align: center;
+    padding: 5%;
+    width: 100%;
+    display: block;
     font-family: "DM Serif Text", Times, serif;
     font-size: calc(10px + 0.8vw);
     text-decoration: none;  /* remove underline */
     color: beige;
+    border: calc(1px + 0.2vw) solid darkgreen;
+    border-radius: calc(2px + 0.5vw);
+    background-color: seagreen;
 }
 
 #portrait {
@@ -258,26 +260,26 @@ main p {
     }
 
     nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
         max-width: 100%;
         padding: 1%;
     }
 
     nav ul {
-        display: flex;
         flex-direction: row;
         justify-content: center;
-        padding: 0.5%;
+        gap: calc(2px + 0.5vw);
     }
 
     nav li {
-        padding: 1% 2%;
+        flex: auto;
     }
 
     nav a {
+        display: block;
+        text-align: center;
+        padding: calc(2px + 0.1vh);  /* fixed padding for all header with different width */
         font-size: calc(8px + 1vw);
+        box-sizing: border-box;
     }
 
     #portrait {
